@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.universidad.procesamiento.gestionpedidos.viewController.OrdenViewController">
+   <children>
+      <Separator layoutX="259.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="16.0" />
+      <Separator layoutX="517.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="16.0" />
+      <Separator layoutY="49.0" prefHeight="0.0" prefWidth="800.0" />
+      <TableView fx:id="tableProductoDisponible" layoutX="-2.0" layoutY="49.0" prefHeight="352.0" prefWidth="269.0">
+         <columns>
+            <TableColumn fx:id="tcSkuProducto" prefWidth="63.200013756752014" text="Sku" />
+            <TableColumn fx:id="tcNombreProducto" prefWidth="105.5999984741211" text="Nombre" />
+            <TableColumn fx:id="tcPrecioProducto" prefWidth="100.00006103515625" text="Precio" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnAgregarProductoOrden" layoutX="350.0" layoutY="124.0" mnemonicParsing="false" onAction="#onAgregarProductoOrden" text="Agregar a la orden" />
+      <Button fx:id="btnEliminarProdoOrden" layoutX="345.0" layoutY="175.0" mnemonicParsing="false" onAction="#onEliminarProductoOrden" text="Eliminar de la Orden" />
+      <Button fx:id="btnCompletarOrden" layoutX="353.0" layoutY="225.0" mnemonicParsing="false" onAction="#onCompletarOrden" text="Completar Orden" />
+      <Text layoutX="379.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Producto: " />
+      <Text layoutX="74.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos disponibles" />
+      <Text layoutX="368.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Realizar Orden" />
+      <Text layoutX="610.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos seleccionados" />
+      <TableView fx:id="tableOrdenProducto" layoutX="525.0" layoutY="49.0" prefHeight="352.0" prefWidth="276.0">
+         <columns>
+            <TableColumn fx:id="tcSkuOrden" prefWidth="63.200013756752014" text="Sku" />
+            <TableColumn fx:id="tcNombreProductoOrden" prefWidth="105.5999984741211" text="Nombre orden" />
+            <TableColumn fx:id="tcTotalOrden" prefWidth="107.60003662109375" text="Total" />
+         </columns>
+      </TableView>
+      <TextArea fx:id="txtConfirmacionOrden" layoutX="277.0" layoutY="274.0" prefHeight="103.0" prefWidth="238.0" />
+      <Text fx:id="txtInformacionProducto" layoutX="373.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="67.20001220703125" />
+   </children>
+</Pane>
