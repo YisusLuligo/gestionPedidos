@@ -1,6 +1,16 @@
 package edu.universidad.procesamiento.gestionpedidos.viewController;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
+
+import edu.universidad.procesamiento.gestionpedidos.Controller.ProductoController;
+import edu.universidad.procesamiento.gestionpedidos.model.Producto;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -11,8 +21,9 @@ import javafx.scene.control.TextField;
 
 public class ProductoViewController {
 
-
-
+    ProductoController productoController;
+    ObservableList<Producto> productos = FXCollections.observableArrayList();
+    Producto productoSelecionado;
 
 
         @FXML
@@ -31,19 +42,19 @@ public class ProductoViewController {
         private Button btnModificarProducto;
 
         @FXML
-        private TableView<?> tableProducto;
+        private TableView<Producto> tableProducto;
 
         @FXML
-        private TableColumn<?, ?> tcEstadoProducto;
+        private TableColumn<Producto, String> tcEstadoProducto;
 
         @FXML
-        private TableColumn<?, ?> tcNombreProducto;
+        private TableColumn<Producto, String> tcNombreProducto;
 
         @FXML
-        private TableColumn<?, ?> tcPrecioProducto;
+        private TableColumn<Producto, Double> tcPrecioProducto;
 
         @FXML
-        private TableColumn<?, ?> tcSkuProducto;
+        private TableColumn<Producto, String> tcSkuProducto;
 
         @FXML
         private TextField txtNombreProducto;
@@ -71,19 +82,30 @@ public class ProductoViewController {
 
         @FXML
         void initialize() {
-            assert btnAgregarProducto != null : "fx:id=\"btnAgregarProducto\" was not injected: check your FXML file 'productos.fxml'.";
-            assert btnEliminarProducto != null : "fx:id=\"btnEliminarProducto\" was not injected: check your FXML file 'productos.fxml'.";
-            assert btnModificarProducto != null : "fx:id=\"btnModificarProducto\" was not injected: check your FXML file 'productos.fxml'.";
-            assert tableProducto != null : "fx:id=\"tableProducto\" was not injected: check your FXML file 'productos.fxml'.";
-            assert tcEstadoProducto != null : "fx:id=\"tcEstadoProducto\" was not injected: check your FXML file 'productos.fxml'.";
-            assert tcNombreProducto != null : "fx:id=\"tcNombreProducto\" was not injected: check your FXML file 'productos.fxml'.";
-            assert tcPrecioProducto != null : "fx:id=\"tcPrecioProducto\" was not injected: check your FXML file 'productos.fxml'.";
-            assert tcSkuProducto != null : "fx:id=\"tcSkuProducto\" was not injected: check your FXML file 'productos.fxml'.";
-            assert txtNombreProducto != null : "fx:id=\"txtNombreProducto\" was not injected: check your FXML file 'productos.fxml'.";
-            assert txtPrecioProducto != null : "fx:id=\"txtPrecioProducto\" was not injected: check your FXML file 'productos.fxml'.";
-            assert txtSkuProducto != null : "fx:id=\"txtSkuProducto\" was not injected: check your FXML file 'productos.fxml'.";
-
+            productoController = new ProductoController();
+            initView();
         }
 
+    private void initView() {
+        initDataBinding();
+        obtenerProductos();
+        tableProducto.getItems().clear();
+        tableProducto.setItems(productos);
+
+        //limpiarCampos();
+        //listenerSelection();
     }
+
+    private void obtenerProductos() {
+            productos.addAll(productoController.obtenerProductos());
+
+    }
+
+    private void initDataBinding() {
+            tcNombreProducto.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNombre()));
+            tcPrecioProducto.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getPrecio()));
+            tcEstadoProducto.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEstado()));
+    }
+
+}
 

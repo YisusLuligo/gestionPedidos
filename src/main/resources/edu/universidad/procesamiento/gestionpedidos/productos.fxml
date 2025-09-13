@@ -9,7 +9,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.universidad.procesamiento.gestionpedidos.viewController.ProductoViewController">
    <children>
       <SplitPane dividerPositions="0.49760994263862335" orientation="VERTICAL" prefHeight="420.0" prefWidth="800.0">
