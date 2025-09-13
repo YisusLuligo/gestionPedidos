@@ -1,17 +1,16 @@
 package edu.universidad.procesamiento.gestionpedidos.factory;
 
-import edu.universidad.procesamiento.gestionpedidos.model.PrestamoObjeto;
-import edu.universidad.procesamiento.gestionpedidos.model.Producto;
-import edu.universidad.procesamiento.gestionpedidos.model.SistemaDePedido;
+import edu.universidad.procesamiento.gestionpedidos.model.*;
+import edu.universidad.procesamiento.gestionpedidos.service.IOrden;
 import edu.universidad.procesamiento.gestionpedidos.service.Iproducto;
 import edu.universidad.procesamiento.gestionpedidos.utils.DataUtil;
 
-import java.util.List;
 import java.util.Map;
 
-public class ModelFactory implements Iproducto {
+public class ModelFactory implements Iproducto, IOrden {
     private static ModelFactory modelFactory;
-    PrestamoObjeto prestamoObjeto;
+    SistemaDePedido sistemaDePedido;
+    Producto producto;
 
     public static ModelFactory getInstance(){
         if(modelFactory == null){
@@ -21,11 +20,38 @@ public class ModelFactory implements Iproducto {
     }
 
     public ModelFactory(){
-        prestamoObjeto = DataUtil.inicializarDatos();
+        sistemaDePedido = DataUtil.inicializarDatos();
     }
 
     @Override
     public Map<String,Producto> obtenerProductos() {
-        return prestamoObjeto.getProductos();
+        return sistemaDePedido.getProductos();
     }
+
+    @Override
+    public boolean agregarProducto(Producto producto) {
+        return sistemaDePedido.agregarProducto(producto);
+    }
+
+    @Override
+    public boolean eliminarProducto(String sku) {
+        return sistemaDePedido.eliminarProducto(sku);
+    }
+
+    @Override
+    public Map<String, Producto> obtenerProductosDisponibles() {
+        return sistemaDePedido.obtenerProductosDisponibles();
+    }
+
+    @Override
+    public Map<String, ItemOrden> obtenerProductosCarrito() {
+        return sistemaDePedido.getCarrito();
+    }
+
+    @Override
+    public boolean agregarCarrito(Producto producto) {
+        return sistemaDePedido.agregarCarrito(producto);
+    }
+
+
 }

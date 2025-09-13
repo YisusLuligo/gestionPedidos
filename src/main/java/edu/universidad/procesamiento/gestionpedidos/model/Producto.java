@@ -36,4 +36,16 @@ public class Producto {
     public static ProductoBuilder builder(){
         return new ProductoBuilder();
     }
+
+    public void marcarNoDisponible() {
+        this.estado = "No disponible";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;               // mismo objeto en memoria
+        if (o == null || getClass() != o.getClass()) return false;
+        Producto producto = (Producto) o;
+        return sku != null && sku.equals(producto.getSku());
+    }
 }

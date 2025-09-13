@@ -16,4 +16,12 @@ public class ProductoController {
     public Map<String,Producto> obtenerProductos() {
     return modelFactory.obtenerProductos();
     }
+
+    public boolean agregarProducto(Producto producto) {
+        return modelFactory.agregarProducto(producto);
+    }
+
+    public boolean eliminarProducto(String text) {
+        return modelFactory.eliminarProducto(text);
+    }
 }
