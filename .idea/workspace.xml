@@ -5,18 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8efd83b1-9f97-44e1-934a-047bc674d659" name="Changes" comment="Creacion de builder, controller, clases y interfaces fx">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/PrestamoObjeto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/service/Iproducto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/utils/DataUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/ItemOrden.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/service/IOrden.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/Controller/OrdenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/Controller/OrdenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/Controller/ProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/Controller/ProductoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/Controller/SistemaDePedidosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/Controller/SistemaDePedidosController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/factory/ModelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/factory/ModelFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/Orden.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/Orden.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/PrestamoObjeto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/SistemaDePedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/SistemaDePedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/build/OrdenBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/build/OrdenBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/build/SistemaDePedidoBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/model/build/SistemaDePedidoBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/service/Iproducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/service/Iproducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/utils/DataUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/utils/DataUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/viewController/OrdenViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/viewController/OrdenViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/viewController/ProductoViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/universidad/procesamiento/gestionpedidos/viewController/ProductoViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/universidad/procesamiento/gestionpedidos/ordenes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/universidad/procesamiento/gestionpedidos/ordenes.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/edu/universidad/procesamiento/gestionpedidos/panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/universidad/procesamiento/gestionpedidos/panel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/universidad/procesamiento/gestionpedidos/productos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/universidad/procesamiento/gestionpedidos/productos.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -65,22 +76,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "fase2",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.universidad.procesamiento.gestionpedidos.HelloApplication" />
@@ -118,7 +129,9 @@
       <option name="presentableId" value="Default" />
       <updated>1757703117646</updated>
       <workItem from="1757703119395" duration="9350000" />
-      <workItem from="1757733015635" duration="3767000" />
+      <workItem from="1757733015635" duration="8981000" />
+      <workItem from="1757781931397" duration="11794000" />
+      <workItem from="1757794913177" duration="4877000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion de builder, controller, clases y interfaces fx">
       <option name="closed" value="true" />
@@ -128,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757721347418</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Creacion de builder, controller, clases y interfaces fx">
+      <option name="closed" value="true" />
+      <created>1757737025087</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757737025087</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -24,6 +24,6 @@ public class SistemaDePedidoBuilder {
     }
 
     public SistemaDePedido build() {
-        return new SistemaDePedido(productos, ordenes);
+        return new SistemaDePedido();
     }
 }

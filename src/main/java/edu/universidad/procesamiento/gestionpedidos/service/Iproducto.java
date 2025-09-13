@@ -7,4 +7,6 @@ import java.util.Map;
 
 public interface Iproducto {
     Map<String,Producto> obtenerProductos();
+    boolean agregarProducto(Producto producto);
+    boolean eliminarProducto(String sku);
 }

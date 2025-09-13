@@ -7,10 +7,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OrdenBuilder {
-    protected int idOrden;
+    protected String idOrden;
     protected Map<String, Producto> productos = new HashMap<>();
 
-    public OrdenBuilder idOrden(int idOrden) {
+    public OrdenBuilder idOrden(String idOrden) {
         this.idOrden = idOrden;
         return this;
     }

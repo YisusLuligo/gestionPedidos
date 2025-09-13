@@ -29,12 +29,12 @@
       <Text layoutX="610.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos seleccionados" />
       <TableView fx:id="tableOrdenProducto" layoutX="525.0" layoutY="49.0" prefHeight="352.0" prefWidth="276.0">
          <columns>
-            <TableColumn fx:id="tcSkuOrden" prefWidth="63.200013756752014" text="Sku" />
-            <TableColumn fx:id="tcNombreProductoOrden" prefWidth="105.5999984741211" text="Nombre orden" />
-            <TableColumn fx:id="tcTotalOrden" prefWidth="107.60003662109375" text="Total" />
+            <TableColumn fx:id="tcNombreOrden" prefWidth="108.79998779296875" text="Nombre Orden" />
+            <TableColumn fx:id="tcCantidadOrden" prefWidth="72.79998779296875" text="Cantidad" />
+            <TableColumn fx:id="tcTotalOrden" prefWidth="96.0" text="Total" />
          </columns>
       </TableView>
       <TextArea fx:id="txtConfirmacionOrden" layoutX="277.0" layoutY="274.0" prefHeight="103.0" prefWidth="238.0" />
-      <Text fx:id="txtInformacionProducto" layoutX="373.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="67.20001220703125" />
+      <Text fx:id="txtInformacionProducto" layoutX="270.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="252.80001831054688" />
    </children>
 </Pane>
